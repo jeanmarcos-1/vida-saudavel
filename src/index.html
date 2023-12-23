@@ -200,10 +200,17 @@
             <div>
                 <h2 class=" inter-400 text-[1rem]">Um site cuidadosamente construído com paixão e força por Jean Marcos.</h2>
                 <div class="flex justify-center items-center">
-                    <button class="text-white p-2 bg-black rounded-2xl mt-2" type="button">github</button>
+                    <a href="https://github.com/jeanmarcos-1/site-muscula-o-tailwindcss.git" class="text-white p-2 bg-black rounded-2xl mt-2">github</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    speedAsDuration: true
+    });
+    </script>
 </body>
 </html>
