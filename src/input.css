@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .roboto-mono-400 {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 400;
+    }
+}
