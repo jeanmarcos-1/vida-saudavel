@@ -23,7 +23,23 @@
 </head>
 <body class="bg-gray-100 roboto-mono-400 text-black">
 
-    <div class="bg-gray-100 w-screen shadow-lg fixed h-[4.5rem]">
+    <button class="fixed hidden md:block" onclick="Abrir()" id="fechado" type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 p-2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg></button>
+    <button class="fixed hidden z-10 mdmin:hidden" onclick="Fechar()" id="aberto" type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 m-2"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg></button>
+    <div id="navbar" class="mdmin:hidden md:hidden w-screen h-screen bg-white fixed">
+        <header class=" max-width-1200 h-screen m-auto">
+            <nav class="flex flex-col justify-center items-center gap-12">
+                <span class="text-[1.4rem] uppercase bebas-400 mt-10">musculação</span>
+                <ul class="flex flex-col gap-6 text-[1.2rem] Diphylleia-400 text-black items-center gap-[4rem]">
+                    <li class="hover:border-b-2 hover:border-slate-200"><a href="#um">Inicial</a></li>
+                    <li class="hover:border-b-2 hover:border-slate-200"><a href="#dois">Biotipo</a></li>
+                    <li class="hover:border-b-2 hover:border-slate-200"><a href="#treis">Nutrição</a></li>
+                    <li class="hover:border-b-2 hover:border-slate-200"><a href="#quatro">Dicas</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="bg-gray-100 w-screen shadow-lg fixed h-[4.5rem] md:hidden">
         <header class="p-6 max-width-1200 m-auto">
             <nav class="flex flex-row justify-between">
                 <span class="text-[1.4rem] uppercase bebas-400">musculação</span>
@@ -46,7 +62,7 @@
                 <hr class="border border-[#292417]">
                 <h2>Descubra o Caminho para o Bem-Estar Total e a Transformação Corporal com Este Guia Abrangente de Estilo de Vida Saudável.</h2>
             </header>
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row justify-center md:flex-col gap-4">
                 <figure><img src="https://images.vexels.com/media/users/3/144850/isolated/preview/1f31f857229d2c923623de9fd83850dc-silhueta-de-treinamento-de-fisiculturista.png" alt="imagem-ilustrativa-musculação"></figure>
                 <figure><img src="https://images.vexels.com/media/users/3/153434/isolated/preview/f1fb22f404a4c1419445ab18c5024630-mulher-segurando-silhueta-de-barra.png" alt="imagem-ilustrativa-musculação"></figure>
             </div>
@@ -60,7 +76,7 @@
                     <h2 class="inter-400 text-2xl">oque é biotipo?</h2>
                     <p class="text-lg inter-400">Biotipos são basicamente jeitos diferentes que os corpos das pessoas podem ter. Cada pessoa tem sua própria combinação única de características físicas, e os biotipos ajudam a descrever isso.</p>
                 </header> 
-                <div class="flex flex-row gap-2">
+                <div class="flex flex-row gap-2 p-2 md:flex-col">
                     <div class="">
                         <div class="flex justify-center">
                             <figure><img src="assets/ectomorfo-removebg-preview.png" alt="imagem-ilustrativa-Ectomorfo"></figure>
@@ -91,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="mt-10 text-lg montserrat-500 pb-4">Biotipo é só uma maneira de falar sobre como os corpos são diferentes, cada um com suas características únicas.</h3>
+                <h3 class="mt-10 text-lg montserrat-500 p-2 pb-4">Biotipo é só uma maneira de falar sobre como os corpos são diferentes, cada um com suas características únicas.</h3>
             </section>
         </div>
 
@@ -101,7 +117,7 @@
                 <span class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">nutrição</span>
                 <h2 class="inter-400 text-xl">A nutrição desempenha um papel crucial na musculação e na busca por objetivos como perda de gordura, ganho de massa muscular e manutenção da saúde geral. Aqui estão alguns fatos importantes relacionados à nutrição na musculação:</h2>
             </header>
-            <div class="flex flex-wrap justify-center gap-10 mt-4">
+            <div class="flex flex-wrap justify-center gap-10 mt-4 p-2">
                 <div class="border border-black w-[26rem] flex flex-col gap-6 p-4 rounded-2xl bg-gradient-to-l from-[#D6FFFB]">
                     <figure><img class="w-24" src="assets/balança.png" alt="ilustração-de-balança"></figure>
                     <span class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">balanço energético</span>
@@ -166,26 +182,26 @@
                     <span class="uppercase text-[#E0922B] bebas-400 text-[1.4rem] mt-4">dicas</span>
                     <h2 class="inter-400 text-xl mb-10">Veja 3 dicas para melhorar seu progresso na saúde, emagrecimento e musculação.</h2>
                 </header>
-                <div class="flex flex-wrap gap-4">
-                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l  from-blue-100">
+                <div class="flex flex-wrap gap-4 p-2">
+                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l  from-blue-100 sm:w-auto">
                         <button type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" /></svg></button>
                         <h3 class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">Hidratação Prioritária</h3>
                         <p class="inter-400 text-lg">Por que é importante: A água é essencial para a saúde, ajuda na recuperação muscular pós-treino e contribui para o funcionamento adequado do corpo. Aplicação: Beba água ao longo do dia, especialmente antes, durante e após os treinos. A hidratação é crucial para a saúde, desempenho e perda de peso.</p>
                     </div>
 
-                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100">
+                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100 sm:w-auto">
                         <button type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" /></svg></button>
                         <h3 class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">Treino de Força Eficiente</h3>
                         <p class="inter-400 text-lg">Por que é importante: O treino de força melhora a saúde muscular, óssea e metabólica, contribuindo para o emagrecimento e bem-estar geral. Aplicação: Inclua exercícios de musculação em seu programa de treino, priorizando movimentos compostos e variando a intensidade para promover adaptações positivas.</p>
                     </div>
 
-                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100">
+                    <div class="border border-black w-[24rem] flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100 sm:w-auto">
                         <button type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" /></svg></button>
                         <h3 class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">Refeições Balanceadas e Programadas</h3>
                         <p class="inter-400 text-lg">Por que é importante: Uma alimentação equilibrada fornece os nutrientes necessários para a saúde, energia para os treinos e apoia o controle de peso.
                             Aplicação: Faça refeições balanceadas, incluindo proteínas, carboidratos complexos e vegetais. Distribua as refeições ao longo do dia para manter o metabolismo ativo.</p>
                     </div>
-                    <div class="border border-black flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100">
+                    <div class="border border-black flex flex-col gap-6 p-4 rounded-[2rem] bg-gradient-to-l from-blue-100 sm:w-auto">
                         <h3 class="uppercase text-[#E0922B] bebas-400 text-[1.4rem]">motivação</h3>
                         <p class="inter-400 text-lg"> Seja disciplinado e motivado! A chave para uma vida saudável e ativa é manter a disciplina em sua rotina de exercícios e alimentação, e encontrar a motivação para superar os desafios. Com determinação, você pode alcançar seus objetivos de saúde e bem-estar. 💪🌟</p>
                     </div>
@@ -197,20 +213,38 @@
 
     <footer class="bg-slate-300 max-screen">
         <div class="max-width-1200 m-auto h-[10rem] flex justify-center items-center">
-            <div>
-                <h2 class=" inter-400 text-[1rem]">Um site cuidadosamente construído com paixão e força por Jean Marcos.</h2>
+            <div class="p-2">
+                <h2 class="border border-black bg-gray-200 rounded-2xl p-2 inter-400 text-[1rem]">Um site cuidadosamente construído com paixão e força por Jean Marcos.</h2>
                 <div class="flex justify-center items-center">
                     <a href="https://github.com/jeanmarcos-1/site-muscula-o-tailwindcss.git" class="text-white p-2 bg-black rounded-2xl mt-2">github</a>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800,
     speedAsDuration: true
     });
+
+    const navbar = document.getElementById("navbar");
+    const aberto = document.getElementById("aberto");
+    const fechado = document.getElementById("fechado");
+
+    function Abrir() {
+        fechado.classList.toggle("md:block");
+        aberto.classList.toggle("hidden");
+        navbar.classList.toggle("md:hidden");
+    }
+
+    function Fechar() {
+        fechado.classList.toggle("md:block");
+        aberto.classList.toggle("hidden");
+        navbar.classList.toggle("md:hidden")
+    }
+
     </script>
 </body>
 </html>
